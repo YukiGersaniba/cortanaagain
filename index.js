@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 require('dotenv/config');
 const http = require('http');
-const port = proccess.env.PORT || 3000
+const port = process.env.PORT || 3000
 // This is a simple server
 http.createServer().listen(port);
 
