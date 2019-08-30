@@ -1,5 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+require('dotenv/config');
+const http = require('http');
+const port = proccess.env.PORT || 3000
+// This is a simple server
+http.createServer().listen(port);
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -49,6 +54,10 @@ client.on('message', msg => {
 } if (msg.content === 'hc bot info') {
   msg.channel.send('Well, I was born on August, and I was created by my Dad, ProfessionalGamer579#3331.')
 }
+});
+
+bot.on('error', err => {
+  console.log(err);
 });
 
 client.login('NTU4OTkwNzA1NDMxOTM3MDgw.XVaGYQ.zffHY5Qqp0NkPbjL078IHK04QuE');
